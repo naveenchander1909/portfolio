@@ -1,0 +1,311 @@
+@import url(fonts.css);
+/*------------ Reset components ------------*/
+body {
+  font-family: 'myrid-regular';
+  background: #f4f6f8;
+  font-size: 16px; }
+
+/*------------ Reusable components ------------*/
+.main-block {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'myrid-semibold'; }
+
+h2 {
+  font-size: 36px; }
+
+a:hover {
+  text-decoration: none; }
+
+.transform-style, .new-arrivals .item {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.backface, .new-arrivals .thumbnail {
+  backface-visibility: hidden; }
+
+.space, .best {
+  margin-top: 118px;
+  margin-bottom: 82px; }
+
+/*------------ Header Style ------------*/
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0; }
+  .header ul li {
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 12px; }
+    .header ul li a {
+      color: #34404b; }
+      .header ul li a i {
+        font-size: 14px;
+        padding-right: 5px; }
+      .header ul li a:hover {
+        color: #ff5912; }
+.header .navbar-inverse {
+  border: none;
+  margin-bottom: 0; }
+  .header .navbar-inverse .navbar-toggle {
+    margin-top: 24px; }
+    .header .navbar-inverse .navbar-toggle .icon-bar {
+      background-color: #000; }
+    .header .navbar-inverse .navbar-toggle:hover .icon-bar, .header .navbar-inverse .navbar-toggle:focus .icon-bar {
+      background: #ffffff; }
+
+.nav-top {
+  background-color: #f4f6f8;
+  padding: 20px 0; }
+  .nav-top .contact {
+    margin-bottom: 10px; }
+    .nav-top .contact i {
+      color: #ff5912; }
+  .nav-top .social ul li {
+    padding: 0; }
+    .nav-top .social ul li a {
+      padding-right: 15px; }
+
+div.main-nav {
+  background: #ffffff;
+  min-height: 80px;
+  line-height: 80px; }
+  div.main-nav ul li {
+    position: relative;
+    display: block; }
+    div.main-nav ul li .cart-num {
+      position: absolute;
+      top: 0;
+      height: 20px;
+      width: 20px;
+      left: 0;
+      line-height: normal;
+      background: #34404b;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      border-radius: 100%;
+      color: #ffffff;
+      text-align: center;
+      line-height: 20px;
+      left: 50%;
+      margin-left: -10px; }
+    div.main-nav ul li.active a {
+      color: #ff5912; }
+  div.main-nav a {
+    font-size: 16px; }
+
+/*------------ Slider Style ------------*/
+.slider .item .main-block {
+  min-height: 650px;
+  position: relative; }
+.slider .slider-1 {
+  background: url("../images/banner-1.jpg") no-repeat left top;
+  background-size: cover;
+  height: 100%; }
+.slider .jumbotron {
+  background: none;
+  padding: 0;
+  padding-right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16%; }
+  .slider .jumbotron h1 {
+    font-family: 'myrid-semibold';
+    font-size: 52px;
+    color: #ff5912; }
+  .slider .jumbotron h6 {
+    color: #3c4751;
+    font-size: 18px; }
+  .slider .jumbotron p {
+    color: #495662;
+    font-size: 16px; }
+  .slider .jumbotron ul {
+    margin-top: 50px;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #3c4751; }
+    .slider .jumbotron ul a {
+      color: #ff5912; }
+      .slider .jumbotron ul a i {
+        padding-right: 10px; }
+.slider .owl-theme .owl-dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+  .slider .owl-theme .owl-dots .owl-dot {
+    display: block; }
+    .slider .owl-theme .owl-dots .owl-dot span {
+      width: 10px;
+      height: 17px;
+      background: #ffffff;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      margin-bottom: 10px; }
+    .slider .owl-theme .owl-dots .owl-dot.active span {
+      background: #ff5912;
+      height: 36px; }
+
+/*------------ New Arrival Style ------------*/
+.new-arrivals .owl-dots {
+  background: #ffffff;
+  height: 55px;
+  line-height: 55px;
+  padding: 5px 0;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
+.new-arrivals .owl-carousel .owl-item:hover .item {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+.new-arrivals .item {
+  position: relative;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  /*		&:hover{
+  			.thumbnail{
+  				transform: rotateY(-180deg);
+  			}
+  			.back{
+  				transform: rotateY(0deg);
+  			}
+  		}*/ }
+.new-arrivals .thumbnail {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  z-index: 1;
+  position: relative; }
+  .new-arrivals .thumbnail h3, .new-arrivals .thumbnail a {
+    font-size: 18px; }
+  .new-arrivals .thumbnail h3 {
+    color: #34404b;
+    margin-bottom: 10px; }
+  .new-arrivals .thumbnail a {
+    color: #ff5912; }
+  .new-arrivals .thumbnail:hover {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
+  .new-arrivals .thumbnail.back {
+    min-height: 346px;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+    .new-arrivals .thumbnail.back h4 {
+      color: #ff5912;
+      margin-bottom: 36px; }
+    .new-arrivals .thumbnail.back small {
+      font-size: 14px;
+      color: #34404b;
+      margin-bottom: 20px; }
+    .new-arrivals .thumbnail.back .color {
+      margin-top: 10px; }
+      .new-arrivals .thumbnail.back .color span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        border-radius: 100%; }
+        .new-arrivals .thumbnail.back .color span.red {
+          background: #e12e3f; }
+        .new-arrivals .thumbnail.back .color span.grey {
+          background: #34404b; }
+        .new-arrivals .thumbnail.back .color span.blue {
+          background: #3ab3ff; }
+        .new-arrivals .thumbnail.back .color span.green {
+          background: #2fd967; }
+    .new-arrivals .thumbnail.back ul li {
+      display: inline-block;
+      padding: 0; }
+    .new-arrivals .thumbnail.back .activity {
+      border-top: 1px solid #f2f4f7;
+      padding-top: 15px;
+      width: 50%;
+      margin: 15px auto 0; }
+      .new-arrivals .thumbnail.back .activity ul {
+        padding: 0; }
+      .new-arrivals .thumbnail.back .activity a {
+        padding: 10px 10px 0;
+        color: #34404b; }
+.new-arrivals .owl-carousel .owl-item img {
+  width: auto;
+  margin: 20px auto 0px; }
+.new-arrivals h2 {
+  padding-top: 119px; }
+  .new-arrivals h2 span {
+    color: #ff5912; }
+  .new-arrivals h2 + p {
+    padding-bottom: 80px; }
+
+/*------------ Best Sales Style ------------*/
+.best h3 {
+  margin: 27px 0 0; }
+.best .price {
+  color: #ff5912;
+  font-size: 2em;
+  margin-top: 25px; }
+  .best .price:before {
+    content: '';
+    background: url(../images/cart.png) no-repeat;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    display: inline-block; }
+.best .kit {
+  background: #ffffff;
+  min-height: 96px; }
+  .best .kit img-responsive {
+    margin-top: 8px; }
+
+@media only screen and (min-width: 768px) {
+  .pull-right-sm {
+    float: right; }
+
+  .nav-top {
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0px 15px; }
+    .nav-top .contact, .nav-top .social {
+      text-align: left;
+      margin: initial; }
+    .nav-top .contact {
+      margin-bottom: 0; }
+    .nav-top .social ul {
+      text-align: right; }
+
+  div.main-nav {
+    min-height: 120px;
+    line-height: 120px; }
+    div.main-nav ul {
+      padding-top: 33px;
+      padding-left: 3%; }
+      div.main-nav ul li {
+        padding-right: 0px; }
+
+  .jumbotron ul li {
+    display: inline-block;
+    padding-right: 30px; } }

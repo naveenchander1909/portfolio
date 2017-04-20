@@ -1,0 +1,27 @@
+/*adding default fonts*/
+@font-face {
+	font-family: 'myrid-regular';
+	src: url('../fonts/MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/MyriadPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/MyriadPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/MyriadPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myrid-semibold';
+	src: url('../fonts/MyriadPro-BoldSemiCn.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/MyriadPro-BoldSemiCn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/MyriadPro-BoldSemiCn.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/MyriadPro-BoldSemiCn.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/MyriadPro-BoldSemiCn.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myrid-light';
+	src: url('../fonts/myriadpro-light.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/myriadpro-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/myriadpro-light.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/myriadpro-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/myriadpro-light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

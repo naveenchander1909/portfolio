@@ -1,0 +1,60 @@
+$default: #f4f6f8;
+$white:  #ffffff;
+$orange: #ff5912;
+$deep-blue: #34404b;
+$light-blue: #3c4751;
+$lighter-blue: #495662;
+$white: #ffffff;
+$footer-blue: #28313b;
+$light-grey: #7c8791;
+
+// media defined
+$mobile: "only screen and (min-width : 768px)";
+
+// mixins defined
+
+@mixin position($pos) {
+	position: $pos;
+}
+@mixin bg($bg) {
+	background: url($bg) no-repeat left top;
+	background-size: cover;
+}
+
+@mixin vertical-center($top, $t-top){
+	position: absolute;
+	top: $top;
+	transform: translateY($t-top);
+}
+
+@mixin v-center($height, $line-height){
+	min-height: $height;
+	line-height: $line-height;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color){
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+	box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin transform($v){
+	-webkit-transform: rotateY($v);
+	-moz-transform: rotateY($v);
+	-o-transform: rotateY($v);
+	transform: rotateY($v);
+}
+
+@mixin transition($v){
+	-webkit-transition: $v;
+	-moz-transition: $v;
+	-o-transition: $v;
+	transition: $v;
+}

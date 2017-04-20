@@ -1,0 +1,37 @@
+@import 'mixin';
+@media only screen and (min-width : 768px) {
+	.pull-right-sm {
+		float: right;
+	}
+	.nav-top{
+		@include v-center(60px, 60px);
+		padding: 0px 15px;
+		.contact, .social {
+			text-align: left;
+			margin: initial;
+		}
+		.contact{
+			margin-bottom: 0;
+		}
+		.social ul{
+			text-align: right;
+		}
+	}
+
+	div.main-nav{
+		@include v-center(120px, 120px);
+		ul{
+			padding-top: 33px;
+			padding-left: 3%;
+			li{
+				padding-right: 0px;
+			}
+		}
+	}
+	.jumbotron{
+		ul li{
+			display: inline-block;
+			padding-right: 30px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@media only screen and (min-width: 768px) {
+  .pull-right-sm {
+    float: right; }
+
+  .nav-top {
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0px 15px; }
+    .nav-top .contact, .nav-top .social {
+      text-align: left;
+      margin: initial; }
+    .nav-top .contact {
+      margin-bottom: 0; }
+    .nav-top .social ul {
+      text-align: right; }
+
+  div.main-nav {
+    min-height: 120px;
+    line-height: 120px; }
+    div.main-nav ul {
+      padding-top: 33px;
+      padding-left: 3%; }
+      div.main-nav ul li {
+        padding-right: 0px; }
+
+  .jumbotron ul li {
+    display: inline-block;
+    padding-right: 30px; } }

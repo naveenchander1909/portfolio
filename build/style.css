@@ -1,0 +1,39 @@
+@import 'fonts.css';
+/*------------ Reset components ------------*/
+body {
+  font-family: 'myrid-regular';
+  background: #f4f6f8;
+}
+/*------------ Reusable components ------------*/
+.main-block {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.orange {
+  color: #ff5912;
+}
+.deep-blue {
+  color: #34404b;
+}
+.light-blue {
+  color: #3c4751;
+}
+.lighter-blue {
+  color: #495662;
+}
+.footer-blue {
+  color: #28313b;
+}
+.light-grey {
+  color: #7c8791;
+}
+h2 {
+  font-size: 36px;
+}
+a:hover {
+  text-decoration: none;
+}
+/*------------ Header Style ------------*/
+.nav-top a {
+  color: green;
+}

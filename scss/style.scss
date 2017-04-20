@@ -1,0 +1,337 @@
+@import 'mixin';
+@import 'fonts.css';
+
+/*------------ Reset components ------------*/
+body{
+	font-family: 'myrid-regular';
+	background: #f4f6f8;
+	font-size: 16px;
+}
+
+/*------------ Reusable components ------------*/
+.main-block{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'myrid-semibold';
+}
+
+h2{
+	font-size: 36px;
+}
+a:hover{
+	text-decoration: none;
+}
+.transform-style{
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.backface{
+	backface-visibility: hidden;
+}
+.space{
+	margin-top: 118px;
+	margin-bottom: 82px;
+}
+
+/*------------ Header Style ------------*/
+.header{
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		li{
+			display: inline-block;
+			padding-right: 15px;
+			font-size: 12px;
+			a{
+				color: $deep-blue;
+				i{
+					font-size: 14px;
+					padding-right: 5px;
+				}
+				&:hover{
+					color: $orange;
+				}
+			}
+		}
+	}
+	.navbar-inverse{
+		border: none;
+		margin-bottom: 0;
+		.navbar-toggle{
+			margin-top: 24px;
+			.icon-bar{
+				background-color: #000;
+			}
+			&:hover, &:focus{
+				.icon-bar{
+					background: $white;
+				}
+			}
+		}
+
+	}
+}
+.nav-top{
+	background-color: $default;
+	padding: 20px 0;
+	.contact{
+		margin-bottom: 10px;
+		i{
+			color: $orange;
+		}
+	}
+	.social ul li{
+		padding: 0;
+		a{
+			padding-right: 15px;
+		}
+	}
+}
+div.main-nav{
+	background: $white;
+	@include v-center(80px, 80px);
+	ul li{
+		@include position(relative);
+		display: block;
+		.cart-num{
+			@include position(absolute);
+			top: 0;
+			height: 20px;
+			width: 20px;
+			left: 0;
+			line-height: normal;
+			background: $deep-blue;
+			@include border-radius(100%);
+			color:$white;
+			text-align: center;
+			line-height: 20px;
+			left: 50%;
+			margin-left: -10px;
+		}
+		&.active a{
+			color: $orange;
+		}
+	}
+	a{
+		font-size: 16px;
+	}
+}
+
+/*------------ Slider Style ------------*/
+.slider{
+	.item .main-block{
+		min-height: 650px;
+		position: relative;
+	}
+	.slider-1{
+		@include bg('../images/banner-1.jpg');
+		height: 100%;
+	}
+	.jumbotron{
+		background: none;
+		padding: 0;
+		padding-right: 0;
+		@include vertical-center(50%, -50%);
+		left: 16%;
+		h1{
+			font-family: 'myrid-semibold';
+			font-size: 52px;
+			color: $orange;
+		}
+		h6{
+			color: $light-blue;
+			font-size: 18px;
+		}
+		p{
+			color: $lighter-blue;
+			font-size: 16px;
+		}
+		ul{
+			margin-top: 50px;
+			list-style: none;
+			padding: 0;
+			font-size: 18px;
+			color: $light-blue;
+			a{
+				color: $orange;
+				i{
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+	.owl-theme .owl-dots{
+	@include vertical-center(50%, -50%);
+		.owl-dot{
+			display: block;
+			span{
+				width: 10px;
+				height: 17px;
+				background: $white;
+				@include border-radius(0);
+				margin-bottom: 10px;
+			}
+			&.active span{
+				background: $orange;
+				height: 36px;
+			}
+		}
+	}
+}
+
+/*------------ New Arrival Style ------------*/
+.new-arrivals{
+	.owl-dots{
+		background: $white;
+		height: 55px;
+		line-height: 55px;
+		padding: 5px 0;
+		@include box-shadow(0px, 0px, 20px, 0px, rgba(0,0,0,0.1));
+	}
+	.owl-carousel .owl-item:hover .item{
+		@include transform(180deg);
+	}
+	.item{
+		position: relative;
+		@include transition(0.6s);
+		@extend .transform-style;
+/*		&:hover{
+			.thumbnail{
+				transform: rotateY(-180deg);
+			}
+			.back{
+				transform: rotateY(0deg);
+			}
+		}*/
+	}
+	.thumbnail{
+		@include border-radius(0);
+		@extend .backface;
+		border: 0;
+		z-index: 1;
+		position: relative;
+		h3, a{
+			font-size: 18px;
+		}
+		h3{
+			color: $deep-blue;
+			margin-bottom: 10px;
+		}
+		a{
+			color: $orange;
+		}
+		&:hover{
+			@include box-shadow(0px, 0px, 20px, 0px, rgba(0,0,0,0.1));
+		}
+		&.back{
+			min-height: 346px;
+			width: 100%;
+			top: 0;
+			position: absolute;
+			z-index: 0;
+			@include transform(180deg);
+			h4{
+				color: $orange;
+				margin-bottom: 36px;
+			}
+			small{
+				font-size: 14px;
+				color: $deep-blue;
+				margin-bottom: 20px;
+			}
+			.color{
+				margin-top: 10px;
+				span{
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					@include border-radius(100%);
+					&.red{
+						background: #e12e3f;
+					}
+					&.grey{
+						background: #34404b;
+					}
+					&.blue{
+						background: #3ab3ff;
+					}
+					&.green{
+						background: #2fd967;
+					}
+				}
+			}
+			ul{
+				li{
+					display: inline-block;
+					padding: 0;
+				}
+			}
+			.activity{
+				ul{
+					padding: 0;
+				}
+				border-top: 1px solid #f2f4f7;
+				padding-top: 15px;
+				width: 50%;
+				margin: 15px auto 0;
+				a{
+					padding: 10px 10px 0;
+					color: $deep-blue;
+				}
+			}
+		}
+	}
+	.owl-carousel .owl-item img{
+		width: auto;
+		margin: 20px auto 0px;
+	}
+	h2{
+		padding-top: 119px;
+		span{
+			color: $orange;
+		}
+		+ p{
+			padding-bottom: 80px;
+		}
+	}
+}
+
+/*------------ Best Sales Style ------------*/
+.best{
+	@extend .space;
+	h3{
+		margin: 27px 0 0;
+	}
+	p{
+	}
+	.price{
+		color: $orange;
+		font-size: 2em;
+		margin-top: 25px;
+		&:before{
+			content: '';
+			background: url(../images/cart.png) no-repeat;
+			position: relative;
+			width: 22px;
+			height: 22px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+	}
+	.kit{
+		background: $white;
+		min-height: 96px;
+		img-responsive{
+			margin-top: 8px;
+		}
+	}
+}
+
+@import 'mobile';
